@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    height: 80vh;
+    width: 60vw;
+    padding: 60px;
+    border-radius: 15px;
+}
+
+.title {
+    text-align: center;
+    height: 10%;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 90%;
+}
+
+.result img:nth-child(1) {
+    width: 100%;
+}
+
+.result  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.url {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 25px;
+}
+
+.url button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    background-color: rgb(154, 72, 241);
+    color: aliceblue;
+    font-size: 1rem;
+}
+
+.url button:hover {
+    background-color: rgb(119, 51, 191);
+}
+
+.url input {
+    padding: 20px 25px;
+    border-radius: 6px;
+    width: 80%;
+    margin: 0 auto;
+    border: none;
+    background-color: aliceblue;
+    outline: transparent;
+}
+
+.url input:focus {
+    outline: salmon;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+h2 {
+    font-size: 1.5rem;
+}
+
+.resize {
+    position: absolute;
+    background-color: #eaeaea;
+    height: fit-content;
+    width: fit-content;
+    padding: 40px 20px;
+    border-radius: 10px;
+    top: -1000px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+    transition: .5s;
+    z-index: 99;
+    opacity: 0;
+}
+
+.resize button {
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.resize button:hover {
+    background-color: #c4c4c4;
+}
+
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.4);
+    position: absolute;
+    left: -5000px;
+    top: 0;
+    opacity: 0;
+    z-index: 99;
+}
+
+@media screen and (min-width:300px) and (max-width: 850px) {
+    .container {
+        width: 100%;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: .8rem;
+    }
+
+    .url input {
+        padding: 10px 15px;
+        margin-top: 15px;
+    }
+
+}
+
+@media screen and (min-width:851px) and (max-width:1280px) {
+    .container {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}

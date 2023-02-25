@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <ink rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    <title>QR Generator</title>
+</head>
+<body>
+
+    <section class="container">
+        <section class="title">
+            <h1>Generate Your Own QR Codes</h1>
+            <h2>Fast and Easy</h2>
+        </section>
+
+        <section class="main">
+            <section class="url">
+                <input type="text" class="url-value" placeholder="Paste a url to create QR code">
+                <div>
+                    <button id="size-button">size</button>
+                    <button id="start-generate">Start Generate</button>
+                </div>
+            </section>
+            <section class="result">
+                <img src="image.jpg" alt="">
+            </section>
+        </section>
+        
+        <section class="resize">
+            <img src="example.png" class="" alt="">
+            <input id="slider" type="range" min="50" max="400" value="100">
+            <p class="size-img"></p>
+            <button type="button">Done</button>
+        </section>
+
+    </section>
+
+    <div class="overlay"></div>
+    <script src="script.js"></script>
+</body>
+</html>
